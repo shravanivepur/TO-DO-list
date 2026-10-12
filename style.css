@@ -1,0 +1,140 @@
+
+/* 1. Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* 3. Main container */
+.todo-container {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Heading */
+h1 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* 5. Input and Add button */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+#taskInput:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+#addBtn {
+    padding: 12px 18px;
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background-color: #1d4ed8;
+}
+
+/* 6. Task list */
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+    margin-bottom: 10px;
+
+    background-color: #f8fafc;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+#taskList li span {
+    flex: 1;
+}
+
+/* 7. Completed task */
+#taskList li.completed span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* 8. Delete button */
+.delete-btn {
+    background-color: #fee2e2;
+    color: #b91c1c;
+
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #fecaca;
+}
+
+/* 9. Mobile screens */
+@media (max-width: 400px) {
+    .todo-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #addBtn {
+        padding: 12px;
+    }
+}
